@@ -2,5 +2,6 @@
 
 int main(void)
 {
-    printf("hello world\n");
+    char answer[] = "Max";
+    printf("hello world %s\n",answer);
 }
