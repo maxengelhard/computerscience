@@ -1,9 +1,12 @@
 import sys
 
 def main():
-    token = sys.argv[1] 
-    # assert that it's 26 characters
-    assert len(token)==26
+    try:
+        token = sys.argv[1] 
+    except:
+        raise ValueError("Usage: substitution.py key")
+    # assert that it's 26 characters 
+    if not len(token)==26: raise ValueError("Key must contain 26 characters.")
 
     token += token.lower()
 
