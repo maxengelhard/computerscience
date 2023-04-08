@@ -15,7 +15,7 @@ def main():
             countSentences +=1
         elif l ==' ':
             countWords += 1
-        elif l!="'":
+        elif l!="'" or l!='-':
             countLetters+=1
     # end of all
     countWords+=1
@@ -25,7 +25,17 @@ def main():
 
     level = round(calcLevel(L,S))
 
+    if level >16:
+        level = '16+'
+    if level <1:
+        level = 'Before Grade 1'
+    else:
+        level = 'Grade ' + str(level)
+   
     print(level)
+    return level
+
+    
 
 
 def calcLevel(L, S): 
